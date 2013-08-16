@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Trigon Patterns and Tricks</title>
+    <meta name="viewport"
+	  content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta charset="utf-8">
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/trigon.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script src="js/util.js"> </script>
+    <script src="js/sequence.js"> </script>
+    <script src="js/frame.js"> </script>
+    <script src="js/object_set.js"> </script>
+    <script src="js/trigon.js"> </script>
+    <script src="js/notation.js"> </script>
+    <script src="js/draw.js"> </script>
+    <script>
+      $(window).load(function() {
+      trigonViz();
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container-narrow">
+      <header>
+        <a href="index.html"><img src="assets/header.png"/><h1>Trigon</h1></a>
+      </header>
+      <div class="content">
+	<h2 id="introduction">Patterns</h2>
+	<p>
+	  There are a ton of different patterns and tricks which can be done with the trigon, and most areas are completely unexplored. The goal of this page is to give some ideas of directions to look. Patterns that involve throwing and catching are notated using TrigonViz. Go <a href="index.html">here </a> for information on how to read or write this notation. For a quick summary, balls are labeled A&ndash;C, strings are labeled a&ndash;c, and Aa, Bb and Cc are opposite each other.
+	</p>
+
+	<h5> Contents </h5>
+	<ul>
+	  <li><a href="#basicballs">Basic Ball Based Patterns</a></li>
+	  <li><a href="#duals">Duals and String Based Patterns</a></li>
+	  <li><a href="#mixed">Mixing Balls and Strings</a></li>
+	  <li><a href="#twirling">Twirling</a></li>
+	  <li><a href="#swinging">Swinging</a></li>
+	  <li><a href="#handroll">Hand Roll</a></li>
+	  <li><a href="#moreideas">More Ideas</a></li>
+	</ul>
+
+	<h2 id="basicballs">Basic Ball Based Patterns</h2>
+	<p>
+	  There are four actions you can take in which you start with a ball in each hand, and end with a ball in each hand. Each of these actions can be performed in a massive variety of ways. The notation only described the way the balls change hands. Some of these movements will feel most comfortable holding the balls in specific ways. Try to find grips that make everything feel smooth and flowy.
+	</p>
+	<h3 class="trigonviz">RotateRight</h3>
+	<h3 class="trigonviz">PivotRight</h3>
+	<h3 class="trigonviz">Switch</h3>
+	<h3 class="trigonviz">Same</h3>
+	<p>
+	  Obviously you can also <code>RotateLeft</code> or <code>PivotLeft</code>. By combining these basic moves, many interesting patterns can be constructed.
+	</p>
+
+	<h3>Cascade=<span class="trigonviz">PivotRight*</span></h3>
+
+	<p>Note that "*" means to repeat the previous actions in the opposite direction.</p>
+
+	<h3>423=<span class="trigonviz">PivotRight PivotRight*</span></h3>
+
+	<p>
+	  The <code>Cascade</code> pattern is easiest to do if you begin with one hand facing down, and one hand facing up. Throw the ball in the hand facing up away from yourself, and with that hand, claw catch the free ball. At the same time, rotate the hand facing down such that it faces up. Repeat this movement, and you'll be running the <code>Cascade</code>!
+	</p>
+
+	<h2 id="duals">Duals and String Based Patterns</h2>
+	<p>
+	  One fun property of the trigon is that every trick has a "dual." If you take a pattern, and replace each ball with the string opposite it, and replace each string with the ball opposite it, you normally get a new pattern! There are a few self-dual patterns, in which taking the dual doesn't do anything. If we take the patterns we've already looked at, and take the dual, we get a bunch of new ones!
+	</p>
+
+	<h3 class="trigonviz">DualRotateRight</h3>
+	<h3 class="trigonviz">DualPivotRight</h3>
+	<h3 class="trigonviz">DualSwitch</h3>
+	<h3 class="trigonviz">DualSame</h3>
+	<h3 class="trigonviz">DualCascade</h3>
+	<h3 class="trigonviz">Dual423</h3>
+
+	<h2 id="mixed">Mixing Balls and Strings</h2>
+	<p> You can mix balls and strings arbitrarily. There are a massive number of different ways to hold this set of objects. Here's a few to get you thinking.
+	<h3 class="trigonviz">HalfRotateRight</h3>
+	<h3 class="trigonviz">DualHalfRotateRight</h3>
+	<h3 class="trigonviz">MultiCascade</h3>
+
+	<h2 id="twirling">Twirling</h2>
+	<p>
+	  The trigon can be twirled around one finger continuously, optionally isolating one ball. This only works if the trigon is constructed such that the string is running through the center of each ball. Place a finger (likely your dominant hand index finger to begin with) adjacent to one of the three balls. Start spinning the trigon around that finger such that the rotation forces your finger towards the ball, not away from it. That means, if your finger is to the right of the ball, rotate counter-clockwise, and if your finger is to the left of the ball, rotate clockwise. It is possible to keep the trigon as an equilateral triangle while twirling it. There are a bunch of potential tricks involving throwing from twirling, and catching into a twirl.
+	</p>
+
+	<h2 id="swinging">Swinging</h2>
+	<p>
+	  There are many poi inspired ways of swinging the trigon. Stalls and plane changes are quite nice looking. Unlike poi, even when motionless the trigon defines a plane. A trigon with swivels will make many swinging patterns much easier.
+	</p>
+
+	<h2 id="handroll">Hand Rolls</h2>
+	<h3 class="trigonviz">A:B :a B:C</h3>
+	<p>
+	  This move was inspired by the kendama hand roll. Start with one ball in each hand. Drop the ball from your non-dominant hand ("A" in the diagram) and swing the two free balls down and around your dominant hand. As the free balls pass over your dominant hand, the string which was originally opposite your non dominant hand ("a" in the diagram) should be wrapping around your dominant hand. Let go of the ball in your dominant hand, and loosely grasp this string, so that your hand slides down the string to the ball which was originally free ("C"). Finally, catch the ball which originated in your dominant hand ("B") in your non-dominant hand.
+	</p>
+
+	<h2 id="moreideas">More Ideas</h2>
+	<p>
+	  There are tons of tricks and patterns waiting to be explored! There are lots of body moves possible: around the leg <code>Rotation</code>s, penguin catches and throws, and many more. Stalls on various parts of the body are doable, multiplexes are interesting, and bouncing the balls off the ground or each other has a lot of potential. Go <a href="https://www.facebook.com/groups/trigonjuggling/doc/351060611692974/"> build a trigon</a>, make some tricks and share them with others!
+	</p>
+	<hr>
+	<footer class="text-center">
+          <p>&copy; Tim Dresser 2013</p>
+	</footer>
+      </div>
+    </div>
+  </body>
+</html>

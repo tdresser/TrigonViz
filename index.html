@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TrigonViz</title>
+    <meta name="viewport"
+	  content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta charset="utf-8">
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/trigon.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script src="js/util.js"> </script>
+    <script src="js/sequence.js"> </script>
+    <script src="js/frame.js"> </script>
+    <script src="js/object_set.js"> </script>
+    <script src="js/trigon.js"> </script>
+    <script src="js/notation.js"> </script>
+    <script src="js/draw.js"> </script>
+    <script>
+      $(window).load(function() {
+      trigonViz();
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container-narrow">
+      <header>
+        <a href="index.html"><img src="assets/header.png"/><h1>Trigon</h1></a>
+      </header>
+      <div class="content">
+	<h2 id="introduction">Introduction</h2>
+	<p> The trigon is a new juggling prop, with tricks influenced by toss juggling, poi, and many other disciplines. In order to allow the communication of tricks which involve throwing and catching strings and balls, I have started constructing a notation for describing these patterns. TrigonViz is a visualizer of two separate notation systems, a human friendly notation which describes actions taken upon the trigon, and a more flexible notation which describes the succession of states the trigon is in. If you have any questions or suggestions, please feel free to ask on <a href="http://www.facebook.com/groups/trigonjuggling/">the Trigon Juggling Facebook group</a>.
+	  For more information, see <a href="patterns.html">the list of trick ideas</a>, or <a href="https://www.facebook.com/groups/trigonjuggling/doc/351060611692974/">how to build a trigon</a>.
+
+	  For an example of a trigon in action, see <a href="http://youtu.be/mjg3BS4RhSo"> this video</a>.
+	</p>
+
+	<h5> Contents </h5>
+	<ul>
+	  <li><a href="#reading">Reading Pattern Diagrams</a></li>
+	  <li><a href="#notating">Notating Patterns</a></li>
+	  <li><a href="#contributing">Contributing to Action Notation</a></li>
+	</ul>
+
+	<h2 id="reading">Reading Pattern Diagrams</h2>
+
+	<p> A <code>Box</code> pattern could be described using action notation as
+	  <code>RotateRight RotateLeft</code>
+	  or in state notation as
+	  <code>A:B C:A A:B</code>.
+	  This is displayed as:
+	  <h3 class="trigonviz">Box</h3>
+	</p>
+
+	<p>
+	  These diagrams are drawn based on the following labeling of the parts of a trigon:
+	  <img src="assets/explain_diagrams.png"
+	       class="img-polaroid pagination-centered"></img>
+
+	  Balls are labeled with capital letters, and strings are labeled with lower case letters. The <code>Box</code> pattern above only uses balls, so the edges are left out of the diagram. The diagram consists of three frames. In the first frame, the left hand holds the "A" ball and the right hand holds the "B" ball. The next frame shows the "C" ball in the left hand, and the "A" ball in the right hand. The diagram doesn't indicate how you perform this change of ball position, there are an infinite number of different ways this could be executed. The last frame returns to the starting position. To perform the pattern, loop these two movements continuously.
+	</p>
+
+	<p>
+	  In general, to read a diagram, hold the objects in the way indicated by the first frame. Use the labels given by the first frame to figure out how to move through subsequent frames. When you're on the last frame, to repeat the pattern you may need to re-establish the label of each object. For instance, in the cascade pattern, notated as <code>PivotRight PivotLeft</code> or <code>A:B C:B C:A</code>, when the last frame is reached you must relabel the objects to match the first frame. The pattern consists of two actions which are repeated, but to communicate these two actions, three states must be described.
+	  <h3 class="trigonviz">Cascade</h3>
+	</p>
+
+	<h2 id="notating">Notating Patterns</h2>
+	<p>
+	  State notation is a low level way of describing the succession of states the trigon enters. It is capable of describing most patterns which involve throwing and catching balls and strings. Action notation is still a work in progress and can only describe a fairly small number of patterns. Ideally, all patterns which can be described with state notation will be describable using action notation. To test either notation, visit the <a href="trigonviz.html">trigonviz editor</a>. To see what the current action notation keywords are, go to <a href="all_keywords.html">the list</a>.
+	</p>
+	<p>
+	  Action notation consists of a list of space (or comma) separated actions. This list can be optionally followed by a "*", which indicates that these actions should be followed by the same set of actions in the opposite direction. The example we're going to use here uses siteswap notation: if you aren't familiar with siteswap, take a look at <a href="https://www.youtube.com/watch?v=rWQXOHn3sw8">Mike Moore's tutorial video</a> for an introduction. The pattern <code>423</code> performed with balls only can be written in several different ways. We could write <code>PivotRight PivotRight <wbr/> PivotLeft PivotLeft</code> or <code>PivotRight PivotRight *</code> in action notation. In state notation, we could right <code>A:B C:B A:B A:C A:B</code> or <code>A:B C:B A:B *</code>.
+	<h3 class="trigonviz">423</h3>
+	</p>
+
+	<p>
+	  The "*" doesn't increase the flexibility of the notation, it just makes it a little more concise.
+	</p>
+
+	<h2 id="contributing">Contributing to Action Notation</h2>
+	<p>
+	  Action notation still has a long way to go before it will be useful. I'm hoping to eventually have a notation which is as expressive as state notation, but significantly easier to read, write, and verbalize. To contribute to action notation, figure out better words for actions than I'm currently using, or think of words for actions that haven't yet been named. Please bring up any suggestions you have on <a href="http://www.facebook.com/groups/trigonjuggling/">the Trigon Juggling Facebook group</a>, or if you're technically inclined, you can make the required changes to TrigonViz yourself! Fork the git repository, modify <code>notation.js</code>, play with the result using <code>trigonviz.html</code>, and submit a pull request!
+	</p>
+
+	<hr>
+	<footer class="text-center">
+          <p>&copy; Tim Dresser 2013</p>
+	</footer>
+      </div>
+    </div>
+  </body>
+</html>

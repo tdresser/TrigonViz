@@ -1,0 +1,43 @@
+canvas {
+    display:block;
+}
+
+header {
+    overflow:hidden;
+    max-width:600px;
+}
+
+header h1 {
+    display:none;
+}
+
+header img {
+    width: 700px;
+}
+
+.container-narrow {
+    margin: 0 auto;
+    max-width: 600px;
+    background-color:#ffffff;
+}
+
+.content {
+    padding: 0 3em 0 3em;
+}
+
+body {
+    background-color:#333333;
+}
+
+footer {
+    padding-bottom:0.5em;
+}
+
+img {
+    display:block;
+    margin:0.5em auto;
+}
+
+a:visited {
+    color:#aa66aa;
+}

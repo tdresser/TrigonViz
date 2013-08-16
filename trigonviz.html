@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TrigonViz Editor</title>
+    <meta name="viewport"
+	  content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta charset="utf-8">
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/trigon.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script src="js/util.js"> </script>
+    <script src="js/sequence.js"> </script>
+    <script src="js/frame.js"> </script>
+    <script src="js/object_set.js"> </script>
+    <script src="js/trigon.js"> </script>
+    <script src="js/notation.js"> </script>
+    <script src="js/draw.js"> </script>
+    <script>
+      $(window).load(function() {
+      drawUrlEntered();
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container-narrow">
+      <header>
+        <a href="index.html"><img src="assets/header.png"/><h1>Trigon</h1></a>
+      </header>
+      <div class="content">
+	<h2>TrigonViz</h2>
+
+	<form class="form-horizontal control-group" id="trigonviz_form">
+	  <input type="submit" class="btn" value="Draw" onClick="drawUserEntered(); return false;"/>
+	  <input type="text" id="pattern_textbox" value="PivotLeft">
+	  <span class="help-inline" id="message"></span>
+	</form>
+
+	<canvas id="canvas" width="800px" height="200px"></canvas>
+
+	<hr>
+	<footer class="text-center">
+          <p>&copy; Tim Dresser 2013</p>
+	</footer>
+      </div>
+    </div>
+  </body>
+</html>
