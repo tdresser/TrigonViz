@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>All Holds</title>
+    <meta name="viewport"
+	  content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta charset="utf-8">
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/trigon.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script src="js/all_holds.js"> </script>
+    <script src="js/util.js"> </script>
+    <script src="js/sequence.js"> </script>
+    <script src="js/frame.js"> </script>
+    <script src="js/object_set.js"> </script>
+    <script src="js/trigon.js"> </script>
+    <script src="js/notation.js"> </script>
+    <script src="js/draw.js"> </script>
+    <script>
+      $(window).load(function() {
+          for (var i=0; i < ALL_HOLDS.length; ++i) {
+              $("#all_holds").append("<h3 class=\"trigonviz\">" + ALL_HOLDS[i] + "</h3>");
+          }
+          trigonViz();
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container-narrow">
+      <header>
+        <a href="index.html"><img src="assets/header.png"/><h1>Trigon</h1></a>
+      </header>
+      <div class="content">
+	<h2>All Holds</h2>
+
+	<div id="all_holds">
+	</div>
+
+	<hr>
+	<footer class="text-center">
+          <p>&copy; Tim Dresser 2013</p>
+	</footer>
+      </div>
+    </div>
+  </body>
+</html>
